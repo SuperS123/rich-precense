@@ -28,7 +28,7 @@ private boolean running = true;
 	  			}
 	  		}).build();
 	  		
-	  		DiscordRPC.discordInitialize("750117278971985931", handlers, true);
+	  		DiscordRPC.discordInitialize("(your client id)", handlers, true);
 	  		
 	  		new Thread("Discord RPC Callback") {
 	  			
@@ -48,8 +48,6 @@ private boolean running = true;
 	  	
 	  	public void update(String firstLine, String secondLine) {
 	  		DiscordRichPresence.Builder b = new DiscordRichPresence.Builder(secondLine);
-	  		b.setBigImage("largw", "very sad");
-	  		b.setSmallImage("school_picturew", "bad");
 	  		b.setDetails(firstLine);
 	  		b.setStartTimestamps(created);
 	  		
